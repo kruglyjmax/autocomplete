@@ -349,7 +349,6 @@ export function autocomplete<T extends AutocompleteItem>(settings: AutocompleteS
         input.removeEventListener("keyup", keyup);
         input.removeEventListener("blur", blur);
         window.removeEventListener("resize", resizeEventHandler);
-        document.removeEventListener("scroll", scrollEventHandler, true);
         clear();
 
         // remove container from DOM
@@ -364,7 +363,6 @@ export function autocomplete<T extends AutocompleteItem>(settings: AutocompleteS
     input.addEventListener("keyup", keyup);
     input.addEventListener("blur", blur);
     window.addEventListener("resize", resizeEventHandler);
-    document.addEventListener("scroll", scrollEventHandler, true);
 
     return {
         destroy
